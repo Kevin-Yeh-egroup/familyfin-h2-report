@@ -31,6 +31,34 @@
     </header>
 
     <main>
+      <section class="section decision-summary">
+        <div class="section-title">
+          <p class="kicker">決策摘要</p>
+          <h2>本次討論建議先定案三件事</h2>
+        </div>
+        <p class="section-intro">
+          這份報告的重點不是增加更多 AI 專案，而是確認下半年以好理家在經營成果為主線，
+          再用 AI 沙盒與 AI 輔助流程降低內部工作負擔。建議本次討論先收斂以下三個決策。
+        </p>
+        <div class="decision-summary-grid">
+          <article>
+            <span>決策一</span>
+            <h3>成果主線</h3>
+            <p>下半年是否以「好理家在官網黏著、工具完成、信任回饋與諮詢銜接」作為主要成果主線。</p>
+          </article>
+          <article>
+            <span>決策二</span>
+            <h3>支援機制</h3>
+            <p>馴錢師 AI 沙盒與 AI 輔助流程是否定位為支援工作流，而不是另開平行的大型專案。</p>
+          </article>
+          <article>
+            <span>決策三</span>
+            <h3>七月交付</h3>
+            <p>七月是否先完成基準資料、頁面路徑、工讀生短任務與沙盒文件場景四項最小交付物。</p>
+          </article>
+        </div>
+      </section>
+
       <section class="section executive">
         <div class="section-title">
           <p class="kicker">一、第一性原理</p>
@@ -274,6 +302,35 @@
             </tr>
           </tbody>
         </table>
+        <div class="task-levels">
+          <h3>工讀生任務分級</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>分級</th>
+                <th>適合任務</th>
+                <th>檢核方式</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>可直接交辦</td>
+                <td>連結檢查、資料格式整理、逐字稿摘要、FAQ 初步分類、手機畫面 QA。</td>
+                <td>依任務卡格式交付，Kevin 抽查結果與穩定度。</td>
+              </tr>
+              <tr>
+                <td>需 Kevin 複核</td>
+                <td>財務/社工概念標記、AI 草稿初檢、內容可信度整理、沙盒文件缺漏提醒。</td>
+                <td>先看判斷理由，再決定是否納入正式文件或頁面修改。</td>
+              </tr>
+              <tr>
+                <td>不可交辦</td>
+                <td>對外承諾、敏感資料判斷、正式財務建議、後台操作、主管回報結論。</td>
+                <td>保留 Kevin 或正式負責人審核，不作為工讀生任務。</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
 
       <section class="section">
@@ -349,11 +406,15 @@
       <section class="section">
         <div class="section-title">
           <p class="kicker">七、三大工作主線</p>
-          <h2>每條主線都要有目標、分工與驗證方式</h2>
+          <h2>一條成果主線，兩個支援機制</h2>
         </div>
+        <p class="section-intro">
+          下半年不建議把三件事視為三個平行大專案。好理家在是對外成果主線；
+          馴錢師 AI 沙盒是內部文件與隱私工作流；AI 輔助流程則用來降低高重複、跨系統工作的負擔。
+        </p>
         <div class="workstream-grid">
           <article class="workstream">
-            <h3>好理家在官網與工具體驗</h3>
+            <h3>成果主線｜好理家在官網與工具體驗</h3>
             <p>讓一般民眾與社工更願意回訪、覺得工具好用，並信任網站能輔助經濟決策前的整理與判斷。</p>
             <ul>
               <li>盤點登入前後、社工/一般民眾入口與功能命名是否清楚。</li>
@@ -362,7 +423,7 @@
             </ul>
           </article>
           <article class="workstream">
-            <h3>馴錢師 AI 沙盒導入</h3>
+            <h3>支援工作流｜馴錢師 AI 沙盒導入</h3>
             <p>建立穩定、高隱私、好用的內部工作流，讓文件草稿與課務資料整理可以自動化產出並保留審稿。</p>
             <ul>
               <li>先小規模試行固定文件，不一次開放給所有人。</li>
@@ -371,7 +432,7 @@
             </ul>
           </article>
           <article class="workstream">
-            <h3>AI 輔助工作機制</h3>
+            <h3>減負工具｜AI 輔助流程（agent）</h3>
             <p>處理高重複、需要多重系統或表單、工作流複雜的工作，先梳理流程，再找出可自動化節點。</p>
             <ul>
               <li>建立週回顧、任務分派、文件草稿、頁面檢查與表單整理工作包。</li>
@@ -437,14 +498,14 @@
       <section class="section">
         <div class="section-title">
           <p class="kicker">十、七月最小可行版本</p>
-          <h2>七月底先證明工作節奏可跑起來</h2>
+          <h2>七月底先交付四份可討論的成果</h2>
         </div>
         <div class="mvp-box">
           <ul>
-            <li>完成好理家在後台總覽七月基準資料整理，並同步盤點頁面與使用者路徑。</li>
-            <li>與奕吟進行一次 60 分鐘頁面使用路徑檢視。</li>
-            <li>從人才庫與過往任務紀錄挑選 2 到 3 位具社工、財務與基礎 AI 能力的工讀生候選，安排短任務測試。</li>
-            <li>確認馴錢師沙盒 3 種最適合先測的文件產出。</li>
+            <li>好理家在七月基準資料表：整理後台總覽、週報/日報、工具事件與諮詢銜接現況。</li>
+            <li>頁面路徑問題清單：由 Kevin 與奕吟先檢視一個入口或工具流程，列出問題、影響、建議修改與驗證方式。</li>
+            <li>工讀生短任務測試結果：從人才庫與過往任務紀錄挑選候選人，檢查社工、財務與基礎 AI 操作能力。</li>
+            <li>沙盒文件場景清單：確認馴錢師沙盒 3 種最適合先測的文件產出，以及資料分級與審稿責任。</li>
           </ul>
         </div>
       </section>
