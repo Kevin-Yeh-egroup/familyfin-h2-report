@@ -517,6 +517,28 @@ th {
   font-weight: 900;
 }
 
+.cell-list {
+  margin: 0;
+  padding-left: 1.1em;
+  color: var(--muted);
+}
+
+.cell-list li {
+  margin: 0 0 0.38em;
+  padding-left: 0.12em;
+}
+
+.cell-list li:last-child {
+  margin-bottom: 0;
+}
+
+.cell-list a {
+  color: var(--teal);
+  font-weight: 900;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+}
+
 tr:last-child td {
   border-bottom: 0;
 }

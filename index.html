@@ -736,6 +736,64 @@
       </section>
     </main>
     <script>
+      const toList = (cell, items) => {
+        const cleanItems = items
+          .map((item) => item.trim().replace(/[。；，、]+$/g, ""))
+          .filter((item) => item.length > 0);
+
+        if (cleanItems.length < 2) return;
+
+        const list = document.createElement("ul");
+        list.className = "cell-list";
+        cleanItems.forEach((item) => {
+          const li = document.createElement("li");
+          li.textContent = item;
+          list.appendChild(li);
+        });
+        cell.replaceChildren(list);
+      };
+
+      document.querySelectorAll("tbody td").forEach((cell) => {
+        const columnIndex = Array.from(cell.parentElement.children).indexOf(cell);
+        const links = Array.from(cell.querySelectorAll("a"));
+
+        if (links.length > 1) {
+          const list = document.createElement("ul");
+          list.className = "cell-list";
+          links.forEach((link) => {
+            const li = document.createElement("li");
+            li.appendChild(link.cloneNode(true));
+            list.appendChild(li);
+          });
+          cell.replaceChildren(list);
+          return;
+        }
+
+        if (cell.children.length > 0 || columnIndex === 0) return;
+
+        const text = cell.textContent.trim();
+        if (text.length < 18) return;
+
+        if ((text.match(/？/g) || []).length >= 2) {
+          toList(cell, text.split("？").map((item) => item && `${item}？`));
+          return;
+        }
+
+        if (text.includes("；")) {
+          toList(cell, text.split("；"));
+          return;
+        }
+
+        if (text.includes(" + ")) {
+          toList(cell, text.split(" + "));
+          return;
+        }
+
+        if ((text.match(/、/g) || []).length >= 2) {
+          toList(cell, text.split("、"));
+        }
+      });
+
       document.querySelectorAll("table").forEach((table) => {
         const labels = Array.from(table.querySelectorAll("thead th")).map((th) => th.textContent.trim());
         table.querySelectorAll("tbody tr").forEach((row) => {
