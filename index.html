@@ -753,8 +753,23 @@
         cell.replaceChildren(list);
       };
 
+      const commaListLabels = new Set([
+        "目標設定參考資料",
+        "七月起觀察訊號",
+        "沙盒可先支援的內容",
+        "需保留人工判斷",
+        "可觀察項目",
+        "七月基準資料來源",
+        "待確認事項",
+        "成果證據",
+        "資料來源",
+        "可能交付"
+      ]);
+
       document.querySelectorAll("tbody td").forEach((cell) => {
         const columnIndex = Array.from(cell.parentElement.children).indexOf(cell);
+        const labels = Array.from(cell.closest("table")?.querySelectorAll("thead th") || []);
+        const headerLabel = labels[columnIndex]?.textContent.trim() || "";
         const links = Array.from(cell.querySelectorAll("a"));
 
         if (links.length > 1) {
@@ -773,11 +788,7 @@
 
         const text = cell.textContent.trim();
         if (text.length < 18) return;
-
-        if ((text.match(/？/g) || []).length >= 2) {
-          toList(cell, text.split("？").map((item) => item && `${item}？`));
-          return;
-        }
+        if (text.includes("？")) return;
 
         if (text.includes("；")) {
           toList(cell, text.split("；"));
@@ -789,7 +800,7 @@
           return;
         }
 
-        if ((text.match(/、/g) || []).length >= 2) {
+        if (commaListLabels.has(headerLabel) && (text.match(/、/g) || []).length >= 2) {
           toList(cell, text.split("、"));
         }
       });
