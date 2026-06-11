@@ -289,6 +289,107 @@ h3 {
   border-color: #b7d9d5;
 }
 
+.visual-plan {
+  background: #fbfdfb;
+}
+
+.operating-map {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) 64px minmax(0, 1fr) 64px minmax(0, 1fr);
+  gap: 12px;
+  align-items: stretch;
+  margin: 0 0 18px;
+}
+
+.map-lane {
+  min-width: 0;
+  min-height: 236px;
+  padding: 22px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.map-lane-primary {
+  background: #e9f5f3;
+  border-color: #b7d9d5;
+}
+
+.lane-tag {
+  display: inline-flex;
+  margin-bottom: 12px;
+  padding: 4px 9px;
+  color: #fff;
+  background: var(--teal);
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+.map-lane:nth-of-type(2) .lane-tag {
+  background: var(--brick);
+}
+
+.map-lane:nth-of-type(3) .lane-tag {
+  background: var(--blue);
+}
+
+.map-lane h3 {
+  margin-bottom: 12px;
+}
+
+.map-lane ul {
+  margin: 0;
+  padding-left: 1.2em;
+  color: var(--muted);
+}
+
+.map-connector {
+  display: grid;
+  place-items: center;
+  min-width: 0;
+  color: var(--teal);
+  font-weight: 900;
+}
+
+.map-connector::before,
+.map-connector::after {
+  content: "";
+  display: block;
+  width: 100%;
+  border-top: 2px solid var(--line);
+}
+
+.milestone-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.milestone-strip div {
+  min-width: 0;
+  padding: 16px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.milestone-strip strong,
+.milestone-strip span {
+  display: block;
+}
+
+.milestone-strip strong {
+  color: var(--brick);
+  font-size: 1rem;
+}
+
+.milestone-strip span {
+  margin-top: 4px;
+  color: var(--muted);
+  font-weight: 700;
+}
+
 .decision-list,
 .decision-summary-grid,
 .workstream-grid {
@@ -394,6 +495,13 @@ table {
   margin-top: 22px;
 }
 
+.source-evidence a {
+  color: var(--teal);
+  font-weight: 900;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.18em;
+}
+
 th,
 td {
   padding: 14px 16px;
@@ -479,6 +587,8 @@ tbody tr:nth-child(even) td {
   }
 
   .summary-map,
+  .operating-map,
+  .milestone-strip,
   .principle-grid,
   .evidence-grid,
   .decision-summary-grid,
@@ -523,8 +633,22 @@ tbody tr:nth-child(even) td {
   }
 
   .decision-list article,
+  .map-lane,
   .workstream {
     min-height: 0;
+  }
+
+  .operating-map {
+    gap: 8px;
+  }
+
+  .map-connector {
+    min-height: 34px;
+  }
+
+  .map-connector::before,
+  .map-connector::after {
+    width: 30%;
   }
 
   table,
@@ -617,7 +741,12 @@ tbody tr:nth-child(even) td {
   }
 
   .cover-grid,
-  .summary-map {
+  .summary-map,
+  .milestone-strip {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .operating-map {
+    grid-template-columns: 1fr;
   }
 }
