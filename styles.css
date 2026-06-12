@@ -337,6 +337,79 @@ h3 {
   color: var(--muted);
 }
 
+.status-scan-block,
+.acceleration-block {
+  margin: 0 0 24px;
+  padding: 22px;
+  background: #fbfdfb;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.status-scan-block h3,
+.acceleration-block h3 {
+  margin-bottom: 10px;
+}
+
+.status-scan-grid,
+.acceleration-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.status-scan-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.acceleration-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.status-scan-grid article,
+.acceleration-grid article {
+  min-width: 0;
+  padding: 16px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.status-scan-grid span,
+.acceleration-grid span {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--teal);
+  font-size: 0.84rem;
+  font-weight: 900;
+}
+
+.status-scan-grid article:nth-child(2) span,
+.acceleration-grid article:nth-child(2) span {
+  color: var(--brick);
+}
+
+.status-scan-grid article:nth-child(3) span,
+.acceleration-grid article:nth-child(3) span {
+  color: var(--blue);
+}
+
+.status-scan-grid article:nth-child(4) span {
+  color: var(--gold);
+}
+
+.status-scan-grid h4 {
+  margin: 0 0 10px;
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+.status-scan-grid ul,
+.acceleration-grid ul {
+  margin: 0;
+  padding-left: 1.2em;
+  color: var(--muted);
+}
+
 .tool-system-block {
   margin: 0 0 24px;
   padding: 22px;
@@ -351,7 +424,8 @@ h3 {
 }
 
 .tool-system-block > p,
-.measurement-block > p {
+.measurement-block > p,
+.acceleration-block > p {
   margin: 0 0 18px;
   color: var(--muted);
 }
@@ -864,6 +938,8 @@ tbody tr:nth-child(even) td {
   .operating-map,
   .milestone-strip,
   .future-grid,
+  .status-scan-grid,
+  .acceleration-grid,
   .tool-system-grid,
   .principle-grid,
   .evidence-grid,
