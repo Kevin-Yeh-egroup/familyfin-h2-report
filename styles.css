@@ -289,6 +289,70 @@ h3 {
   border-color: #b7d9d5;
 }
 
+.future-plan {
+  background: #fff;
+}
+
+.future-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.future-grid article {
+  min-width: 0;
+  padding: 22px;
+  background: #f7faf8;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.future-grid article:first-child {
+  background: #e9f5f3;
+  border-color: #b7d9d5;
+}
+
+.future-grid span {
+  display: inline-flex;
+  margin-bottom: 12px;
+  color: var(--brick);
+  font-size: 0.84rem;
+  font-weight: 900;
+}
+
+.future-grid h3 {
+  margin-bottom: 10px;
+}
+
+.future-grid p {
+  margin: 0 0 14px;
+  color: var(--muted);
+}
+
+.future-grid ul,
+.recommendation-strip ul {
+  margin: 0;
+  padding-left: 1.2em;
+  color: var(--muted);
+}
+
+.recommendation-strip {
+  margin: 0 0 22px;
+  padding: 20px;
+  background: #fff8e9;
+  border: 1px solid #efd39f;
+  border-radius: 8px;
+}
+
+.recommendation-strip h3 {
+  margin-bottom: 12px;
+}
+
+.staffing-priority-table {
+  margin-top: 0;
+}
+
 .visual-plan {
   background: #fbfdfb;
 }
@@ -611,6 +675,7 @@ tbody tr:nth-child(even) td {
   .summary-map,
   .operating-map,
   .milestone-strip,
+  .future-grid,
   .principle-grid,
   .evidence-grid,
   .decision-summary-grid,
