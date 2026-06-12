@@ -349,6 +349,20 @@ h3 {
   margin-bottom: 12px;
 }
 
+.work-goal-block {
+  margin: 0 0 24px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+}
+
+.work-goal-block h3 {
+  margin-bottom: 10px;
+}
+
+.work-goal-table {
+  margin-top: 6px;
+}
+
 .staffing-priority-table {
   margin-top: 0;
 }
