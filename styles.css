@@ -176,7 +176,7 @@ h3 {
   position: fixed;
   z-index: 20;
   top: 92px;
-  left: max(16px, calc((100vw - 1420px) / 2));
+  left: max(16px, calc((100vw - 1472px) / 2));
   width: 168px;
   max-height: calc(100vh - 112px);
   overflow-y: auto;
@@ -232,6 +232,16 @@ h3 {
   border-left-color: var(--teal);
   color: var(--ink);
   outline: none;
+}
+
+@media (min-width: 1261px) and (max-width: 1504px) {
+  .report-cover,
+  .section {
+    width: calc(100vw - 248px);
+    max-width: 1080px;
+    margin-left: 216px;
+    margin-right: 32px;
+  }
 }
 
 .section-title {
@@ -902,6 +912,26 @@ h3 {
 .attachment-callout p {
   margin: 0 0 12px;
   color: var(--muted);
+}
+
+.attachment-link {
+  display: inline-flex;
+  width: fit-content;
+  margin: 0 0 14px;
+  padding: 8px 12px;
+  background: #e8f4f1;
+  border: 1px solid #b8dcd5;
+  border-radius: 6px;
+  color: var(--teal);
+  font-size: 0.9rem;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.attachment-link:hover,
+.attachment-link:focus-visible {
+  background: #ddede9;
+  outline: none;
 }
 
 .attachment-callout ul {
