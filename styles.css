@@ -195,6 +195,24 @@ h3 {
   font-weight: 900;
 }
 
+.nav-group {
+  padding: 8px 0;
+  border-top: 1px solid #edf1ee;
+}
+
+.nav-group:first-of-type {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.nav-group span {
+  display: block;
+  margin: 0 0 4px;
+  color: var(--gold);
+  font-size: 0.76rem;
+  font-weight: 900;
+}
+
 .section-nav a {
   display: block;
   padding: 7px 9px;
@@ -993,7 +1011,7 @@ tbody tr:nth-child(even) td {
     max-height: none;
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 10px;
     margin: 0 auto;
     padding: 10px 16px;
     overflow-x: auto;
@@ -1004,12 +1022,31 @@ tbody tr:nth-child(even) td {
   }
 
   .section-nav strong,
+  .nav-group,
+  .nav-group span,
   .section-nav a {
     flex: 0 0 auto;
   }
 
   .section-nav strong {
     margin: 0 4px 0 0;
+  }
+
+  .nav-group {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 0 8px 0 0;
+    border-top: 0;
+    border-right: 1px solid var(--line);
+  }
+
+  .nav-group:last-child {
+    border-right: 0;
+  }
+
+  .nav-group span {
+    margin: 0 2px 0 0;
   }
 
   .section-nav a {
