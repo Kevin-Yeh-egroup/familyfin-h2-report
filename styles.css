@@ -551,7 +551,12 @@ h3 {
   font-weight: 900;
 }
 
-.timeline-goal-grid,
+.timeline-goal-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
 .collaboration-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -565,6 +570,11 @@ h3 {
   background: #f7faf8;
   border: 1px solid var(--line);
   border-radius: 8px;
+}
+
+.timeline-goal-grid .success-card {
+  background: #fff7ed;
+  border-color: #f0c9a8;
 }
 
 .timeline-goal-grid span,
